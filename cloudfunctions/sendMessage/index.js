@@ -9,18 +9,18 @@ exports.main = async(event, context) => {
     OPENID
   } = cloud.getWXContext()
 
-  const result = await cloud.openapi.templateMessage.send({
+  const result = await cloud.openapi.subscribeMessage.send({
     touser: OPENID,
     page: `/pages/blog-comment/blog-comment?blogId=${event.blogId}`,
     data: {
-      keyword1: {
+      thing8: {
         value: '评价完成'
       },
-      keyword2: {
+      thing2: {
         value: event.content
       }
     },
-    templateId: 'PjUkFDsOsC3ktzUATsIVy0t1D4RlL-aKbuhGUb7TLS0',
+    templateId: 'lnIs8BjVQFq6mIxiZVtGfv3nWI6pLF4VWJQigXvmpV0',
     formId: event.formId
   })
   return result

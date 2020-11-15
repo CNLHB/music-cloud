@@ -1,0 +1,40 @@
+<!--pages/music/music.wxml-->
+<swiper indicator-dots="true" autoplay="true" interval="2000" duration="1000" circular="true">
+  <block wx:for="{{swiperImgUrls}}"  wx:key="_id">
+    <swiper-item >
+      <image src="{{item.fileid}}" class="swiper-img"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="nav">
+    <view class="topList" bindtap="_recomlist"><text class=" {{selAct==true? 'selActive': ''}}">热门歌单</text></view>
+    <view bindtap="toggleSelAct" class="topList"><text class=" {{selAct==false? 'selActive': ''}}">巅峰榜单</text></view>
+
+</view>
+
+<view class="playlist-container"  wx:if="{{selAct == true}}">
+  <block wx:for="{{playlist}}" wx:key="_id">
+    <x-playlist playlist="{{item}}"  ></x-playlist>
+  </block>
+</view>
+<view   wx:else="{{selAct == false}}" class="toplist-container">
+  <block>
+  
+		      <view  class="item" 
+					bindtap="_selectItem"
+					wx:for="{{topList}}" wx:key="id"
+          data-item="{{item}}"
+          >
+		        <view class="icon">
+							<image src="{{item.picUrl}}" class="icon-img" ></image>
+		        </view>
+		        <view class="songlist">
+		          <view class="song" wx:for="{{item.songList}}" wx:for-item="items" wx:key="*this">
+		            <text>{{index + 1}}</text>
+		            <text class="noWrapp">{{items.songname}}-{{items.singername}}</text>
+		          </view>
+		        </view>
+		      </view>
+  </block>
+</view>
+<view class="tips">{{tips}}</view>

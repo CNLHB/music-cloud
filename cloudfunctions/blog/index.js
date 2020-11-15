@@ -87,7 +87,14 @@ exports.main = async(event, context) => {
         return res.data
       })
   })
-
+  app.router('myBlog', async(ctx, next) => {
+    ctx.body = await blogCollection.where({
+        _openid: wxContext.OPENID
+      }).skip(event.start).limit(event.count)
+      .orderBy('createTime', 'desc').get().then((res) => {
+        return res.data
+      })
+  })
 
 
   return app.serve()

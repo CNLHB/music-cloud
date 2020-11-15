@@ -1,0 +1,14 @@
+[
+  {
+    "name": "topList",
+    "value": {
+      "$url": "topList"
+    }
+  },
+  {
+    "name": "mytoplist",
+    "value": {
+      "$url": "mytoplist"
+    }
+  }
+]

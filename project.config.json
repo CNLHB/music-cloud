@@ -1,8 +1,8 @@
 {
-	"miniprogramRoot": "miniprogram/",
+	"miniprogramRoot": "musicCloud/",
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"enhance": true,
 		"postcss": true,
@@ -10,6 +10,7 @@
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
+		"nodeModules": true,
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
@@ -24,12 +25,12 @@
 		"bundle": true
 	},
 	"appid": "wx6a6464ba2c0725ae",
-	"projectname": "cloudDemo",
-	"libVersion": "2.8.1",
+	"projectname": "musicCloud",
+	"libVersion": "2.9.4",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
-	"compileType": "miniprogram",
+	"compileType": "musicCloud",
 	"condition": {
 		"search": {
 			"current": -1,

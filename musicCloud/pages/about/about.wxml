@@ -1,0 +1,20 @@
+<view>
+  <view class="container">
+  	<view class="aboutUrl pmargin">
+		<image class="authUrl" src="https://6c68-lhb2526-1300735609.tcb.qcloud.la/blog/timg4.jpg?sign=96a0d98cc82aebae9e5cb89c792cbe97&t=1583656890"></image>
+	</view>
+
+	<view class="create">
+      <view class="createBy pmargin">Created By</view>
+      <view class="myname">剑七 </view>
+		 
+	</view>
+  </view>
+
+	<view class="wxpublic">
+		<view>关注微信公众号</view>
+		<view class="pw pmargin">韩师剑七</view>
+    <text class="postbug">欢迎开发者通过微信公众号向作者反馈BUG</text>
+	</view>
+
+</view>
